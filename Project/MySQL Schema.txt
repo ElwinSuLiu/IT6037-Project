@@ -1,0 +1,41 @@
+CREATE TABLE Category(
+categoryID INT,
+categoryName VARCHAR(20),
+PRIMARY KEY(CategoryID)
+);
+
+CREATE TABLE Type(
+typeID INT,
+typeName VARCHAR(20),
+PRIMARY KEY(typeID)
+);
+
+CREATE TABLE articleDetails(
+titleID INT,
+titleName VARCHAR(40),
+about TEXT,
+year VARCHAR(10),
+medium VARCHAR(50),
+dimensions VARCHAR(20),
+location VARCHAR(50),
+designedBy VARCHAR(30),
+developer VARCHAR(20),
+PRIMARY KEY (titleID)
+);
+
+CREATE TABLE Article(
+articleID INT,
+titleID INT,
+categoryID INT,
+typeID INT,
+name VARCHAR(30),
+born YEAR,
+died YEAR,
+nationality VARCHAR(20),
+knownFor VARCHAR(30),
+notableWorks VARCHAR(50),
+PRIMARY KEY (articleID),
+FOREIGN KEY (titleID) REFERENCES articleDetails (titleID),
+FOREIGN KEY (categoryID) REFERENCES Category(categoryID),
+FOREIGN KEY (typeID) REFERENCES Type (typeID)
+);
