@@ -8,4 +8,4 @@ How to import data:
 5. Select a single SQL file
 6. In 'Defaul Schema to be Imported To', make the 'Default Target Schema' to the new schema you had created in step 2
 7. Click start import
-8. Repeat step 5 until all the SQL files are imported
+8. Repeat step 5-7 until all the SQL files are imported
