@@ -28,10 +28,10 @@ CREATE TABLE `article` (
   `categoryID` int(11) DEFAULT NULL,
   `typeID` int(11) DEFAULT NULL,
   `name` varchar(30) DEFAULT NULL,
-  `born` year(4) DEFAULT NULL,
-  `died` year(4) DEFAULT NULL,
+  `born` varchar(20) DEFAULT NULL,
+  `died` varchar(20) DEFAULT NULL,
   `nationality` varchar(20) DEFAULT NULL,
-  `knownFor` varchar(30) DEFAULT NULL,
+  `knownFor` varchar(100) DEFAULT NULL,
   `notableWorks` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`articleID`),
   KEY `titleID` (`titleID`),
@@ -49,6 +49,7 @@ CREATE TABLE `article` (
 
 LOCK TABLES `article` WRITE;
 /*!40000 ALTER TABLE `article` DISABLE KEYS */;
+INSERT INTO `article` VALUES (1,1,1,1,'Claude Monet','1840','1926','French','Painter','Water Lilies'),(2,2,1,1,'Leonardo da Vinci','1452','1519','Italian','Art and Science','Mona Lisa, The Last Supper'),(3,3,1,2,'Mona Lisa',NULL,NULL,NULL,NULL,NULL),(4,4,2,3,'Pythagorean theorem',NULL,NULL,NULL,NULL,NULL),(5,5,2,1,'Euclid','4th century BC','3rd century BC',NULL,'Euclidean geometry',NULL),(6,6,2,4,'Quicksort',NULL,NULL,NULL,NULL,NULL),(7,7,3,1,'Bill Gates','1955',NULL,'USA','Founder of the Microsoft Corporation',NULL),(8,8,3,1,'Steve Jobs','1955','2011','USA','Co-cretor of the Macintosh, iPod, iPhone, iPad, and first Apple Stores',NULL),(9,9,3,5,'Java',NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `article` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-18 15:37:53
+-- Dump completed on 2019-09-19 15:40:16
