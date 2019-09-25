@@ -54,7 +54,7 @@ DELIMITER ;;
 CREATE DEFINER=`91031442`@`%` PROCEDURE `searchArticleByKeyword`(keyw varchar(80))
 BEGIN
 SELECT d.titleName, d.about 
- FROM articledetails d
+ FROM article d
  WHERE d.titleName LIKE keyw; 
 END ;;
 DELIMITER ;
